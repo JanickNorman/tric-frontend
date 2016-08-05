@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+	head
+		title=pageName
+		meta(charset="utf-8")
+		meta(name="viewport")
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="assets/css/main.css">
+		<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+	body
+		header#header
+			include ./_partials/header.jade
+		.breadcrumb
+			include ./_partials/breadcrumb.jade
+		section#page-main
+			.page-nav
+				ul.page-nav__navigation(data-accordion-group)
+					li.page-nav__nav-item
+						.page-nav__nav-link-wrapper
+							a(href="#", class="page-nav__nav-link") Sejarah
+					li.page-nav__nav-item
+						.page-nav__nav-link-wrapper
+							a(href="#", class="page-nav__nav-link") Visi dan Misi
+					li.page-nav__nav-item
+						.page-nav__nav-link-wrapper
+							a(href="#", class="page-nav__nav-link") Slogan
+					li.page-nav__nav-item.page-nav__nav-item--has-child.open(data-accordion)
+						.page-nav__nav-link-wrapper
+							a(href="#", class="page-nav__nav-link") Struktur Organisasi
+						ul.page-nav__nav-lvl2(data-content)
+							li.page-nav__nav-item-lvl2
+								a(href="#", class="page-nav__nav-link-lvl2") Regional Board
+							li.page-nav__nav-item-lvl2.page-nav--active
+								a(href="#", class="page-nav__nav-link-lvl2") Mother Chapter
+							li.page-nav__nav-item-lvl2
+								a(href="#", class="page-nav__nav-link-lvl2") Chapter
+						span.page-nav__nav-expander(data-control)
+							span.page-nav__nav-expander-icon -
+					li.page-nav__nav-item.page-nav__nav-item--has-child(data-accordion)
+						.page-nav__nav-link-wrapper
+							a(href="", class="page-nav__nav-link") Partnering Organizations
+						ul.page-nav__nav-lvl2(data-content)
+							li.page-nav__nav-item-lvl2
+								a(href="#", class="page-nav__nav-link-lvl2") HTCI
+								span.page-nav__nav-icon
+							li.page-nav__nav-item-lvl2
+								a(href="#", class="page-nav__nav-link-lvl2") Alliansi 19
+								span.page-nav__nav-icon
+						span.page-nav__nav-expander(data-control)
+							span.page-nav__nav-expander-icon +
+			.page__wrapper.page__wrapper--has-nav
+				h1.page__title Tour de Poncol Jilid 2
+				.page__content-main
+					.page__content-gallery
+						img(src="assets/img/slideshow.jpg", alt="").page__content-gallery-main
+					.page__content-read
+						include ./_partials/loremipsum.jade
+					.page__content-meta-update <strong>Last updated:</strong> 27 July 2016
+					ul.page__social-share
+						li.page__social-share-item
+							a(href="#").page__social-share-link.page__social-share-link--facebook fb
+						li.page__social-share-item
+							a(href="#").page__social-share-link.page__social-share-link--twitter fb
+						li.page__social-share-item
+							a(href="#").page__social-share-link.page__social-share-link--googleplus tw
+						li.page__social-share-item
+							a(href="#").page__social-share-link.page__social-share-link--instagram g+
+					.page__related-content
+						h3 Related Content
+						ul
+							li.page__related-content-item
+								a Tour de jemper
+							li.page__related-content-item
+								a Cara merawat motor yang baik
+					.page__comment-box .page__comment-box
+		include _partials/footer.jade

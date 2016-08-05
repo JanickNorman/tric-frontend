@@ -1,0 +1,10 @@
+mixin media-box(contentType, title)
+	-title = title || 'Tips agar berkendara lebih aman dan tentram'
+	li.media-blog__item
+		a(href="#", class="#{contentType}__item-wrapper")
+			div(class="#{contentType}__pic-container")
+				img(src="assets/img/webbanner.jpg", alt="", class="#{contentType}__item-pic")
+			h3(class="#{contentType}__title") #{title}
+		p(class="#{contentType}__excerpt") Pada tanggal 26 Juli 2016, BINUS dengan bangga menyelenggarakan wisuda yang ke 54. Setelah menempuh perkuliahan selama kurang lebih 4 tahun, akhirnya pada tahun ini BINUS dapat meluluskan 2.892 mahasi...
+		span(class="#{contentType}__date") 20 May 2016
+		a(href="#", class="#{contentType}__read") Read more

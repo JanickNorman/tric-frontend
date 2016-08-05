@@ -1,0 +1,331 @@
+
+//=========================================
+
+
+
+
+.container {
+	@include container($mobile);
+	margin: auto 10px;
+
+
+	@include susy-breakpoint($tablet_layout) {
+		@include container($tablet);
+		margin: auto 10px
+	}
+
+	@include susy-breakpoint($desktop_layout) {
+		@include container;
+		margin: auto 10px;
+	}
+}
+
+.resizable {
+	max-width: 100%;
+	min-width: 100%;
+}
+
+.btn {
+  	&--black {
+	 	background-color: $second-color;
+	 	color: white;
+  	}
+}
+
+// ===== libs =====
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+// ============================================
+header {
+	background-color: $main-color;
+}
+.nav-mob {
+	@include container;
+	position: relative;
+	height: 45px;
+
+  	&__logo {
+  		text-align: center;
+  		top: -25px;
+  	}
+
+  	&--wrapper {
+  		display: inline-block;
+  		position: absolute;
+		right: 0;
+		top: 0;
+		margin: 10px;
+  	}
+
+  	&__search {
+		display: inline-block;
+		margin-right: 10px;
+		cursor: pointer;
+  	}
+
+  	&__burgermenu {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		top: -5px;
+  	}
+
+  	&__burgericon {
+  		width: 30px;
+  		height: 4px;
+  		background-color: $third-color;
+  		display: inline-block;
+  		zoom: 1;
+  		vertical-align: top;
+  		position: relative;
+  		top: 10px;
+		-webkit-transition: background 0.3s, -webkit-transform 0.3s, top 0.3s;
+
+  		&::after {
+	  		@extend .nav-mobile__burgericon;
+	  		top: -12px;
+	  		content: "";
+
+  		}
+  		&::before {
+	  		@extend .nav-mobile__burgericon;
+	  		top: -9px;
+	  		content: "";
+  		}
+
+  		.active > & {
+			height: 0;
+  			&::after {
+				height: 4px;
+				transform: rotate(-45deg);
+				top: -22px;
+  			}
+
+  			&::before {
+  				height: 4px;
+  				transform: rotate(45deg);
+				top: 0;
+  			}
+  		}
+
+  	}
+	&__menu {
+		display: none;
+		background: darken(white, 4);
+		z-index: 99999;
+
+		@include container;
+		.nav-mobile--active & {
+			display: block;
+
+		}
+	}
+
+	&__item {
+		font-size: 1.25em;
+		border-bottom: 2px solid darken($main-grey, 4);
+		text-align: center;
+		padding: 5px auto;
+	}
+
+}
+.main {
+  	@include container($mobile);
+  	margin: auto 10px;
+
+	@include susy-breakpoint($tablet_layout) {
+  		@include container($tablet);
+	}
+
+	@include susy-breakpoint($desktop_layout) {
+		@include container;
+	}
+
+}
+
+.mod-events {
+  	margin-bottom: 30px;
+
+  	&__head {
+		 text-align: center;
+ 	 }
+
+  	&__latestImage {
+		 display: inline-block;
+		 padding: 10px 10px;
+		 width: 100%;
+ 	 }
+
+ 	 &__btn {
+		 text-align: center;
+ 	 }
+
+ 	 @include susy-breakpoint($desktop_layout) {
+		@include span(6 of 12);
+	}
+
+}
+
+
+.event-card {
+  	position: relative;
+ 	background-color: $main-grey;
+  	margin-bottom: 10px;
+ 	border: solid 1px $border-grey;
+
+	 &__date {
+		 background-color: $second-color;
+		 text-align: center;
+		 color: $main-light;
+
+		@include susy-breakpoint($tablet_layout) {
+			@include span(2 of 4);
+			margin: 10px;
+			height: 70px;
+
+			display: inline-block;
+		}
+
+		@include susy-breakpoint($desktop_layout) {
+			display: block;
+		}
+	  }
+
+	  &__title {
+		 text-align: center;
+		 color: $third-color;
+
+		 @include susy-breakpoint($tablet_layout) {
+			@include span(2 of 4 at 2);
+			text-align: left;
+			margin-top: 10px;
+		}
+
+		@include susy-breakpoint($desktop_layout) {
+		}
+	  }
+
+	  &__location {
+		 font-size: 0.825em;
+		 text-align: right;
+		 padding-bottom: 10px;
+		 padding-right: 10px;
+	  }
+
+
+	@include susy-breakpoint($desktop_layout) {
+		@include full;
+		background-color: $main-grey;
+	}
+
+}
+
+.mod-news {
+  	@extend .mod-events;
+
+	  &__wrapper {
+		 @extend .event-card;
+	  }
+
+	  &__head {
+		 @extend .mod-events__head;
+	  }
+
+	  &__latestImage {
+		 @extend .mod-events__latestImage;
+	  }
+
+	&__news-content {
+		border-bottom: 1px solid #cccccc;
+		padding: 0 10px 0 10px;
+
+		&:last-child{
+			 border: 0;
+		}
+	}
+
+	.news-content {
+		&__title {
+			  font-weight: normal;
+			  color: $third-color;
+			  margin-top: 10px;
+			  margin-bottom: 10px;
+		}
+
+		&__date {
+			margin-bottom: 10px;
+		}
+
+	  }
+
+}
+
+.mod-marchandise {
+	background-color: $main-grey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+
+
+	&__head {
+		@extend .mod-events__head;
+	}
+
+	&__list {
+		@include clearfix;
+	}
+
+	&__item {
+		display: inline-block;
+		text-align: center;
+		max-width: 100%;
+		max-height: 100%;
+
+		@include span(2 of 2);
+		margin-bottom: 20px;
+
+		@include susy-breakpoint($tablet_layout) {
+			@include span(1 of 2);
+			margin-bottom: 20px;
+		}
+
+		@include susy-breakpoint($desktop_layout) {
+			@include span(3);
+			padding: 0 10px 0 10px;
+		}
+
+
+	}
+
+	.resizable {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+}
+
+.mod-partnerOrg {
+	&__head {
+		@extend .mod-events__head;
+	}
+
+	&__content {
+		@include container;
+	}
+
+	&__logo {
+		@include full;
+		display: inline-block;
+		text-align: center;
+		max-width: 100%;
+	}
+
+}
+

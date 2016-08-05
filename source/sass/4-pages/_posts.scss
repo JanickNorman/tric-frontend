@@ -1,0 +1,52 @@
+#news {
+	margin-top: em(30px);
+}
+
+.news {
+	@extend .media-box;
+	&__wrapper {
+		@include container($mobile);
+		@include susy-breakpoint($tablet_layout) {
+			@include container($tablet);
+		}
+		@include susy-breakpoint($desktop_layout) {
+			@include container;
+		}
+	}
+	&__header {
+		text-align: center;
+		margin-bottom: em(20px);
+		color: $third-color;
+	}
+	&__list {
+		@extend .media-box__list;
+	}
+	&__item {
+		@extend .media-box__item;
+		background-color: $main-grey;
+	}
+	&__pic-container {
+		@extend .media-box__pic-container;
+	}
+	&__item-pic {
+		@extend .media-box__item-pic;
+	}
+	&__item-wrapper {
+		@extend .media-box__item-wrapper;
+	}
+	&__title {
+		@extend .media-box__title;
+	}
+	&__excerpt {
+		@extend .media-box__excerpt;
+	}
+	&__date {
+		@extend .media-box__date;
+	}
+	&__read {
+		@extend .media-box__read;
+	}
+	&__button-wrapper {
+		@extend .media-box__button-wrapper;
+	}
+}

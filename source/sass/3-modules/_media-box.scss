@@ -1,0 +1,52 @@
+.media-box {
+	@include clearfix;
+	margin-bottom: em(50px);
+	&__list {
+		@include clearfix;
+	}
+	&__item {
+		@include clearfix;
+		position: relative;
+		margin-bottom: em(30px);
+		border-bottom: 1px solid $border-grey;
+		@include susy-breakpoint($desktop_layout) {
+			@include gallery(4 of 12);
+		}
+	}
+	&__pic-container {
+		@include susy-breakpoint($tablet_layout) {
+			@include span(2 of 4);
+		}
+	}
+	&__item-pic {
+		width: 100%;
+		height: auto;
+	}
+	&__item-wrapper {
+		@include clearfix;
+		display: block;
+	}
+	&__title {
+		font-weight: normal;
+		color: $third-color;
+	}
+	&__date {
+		float: left;
+		padding-bottom: em(10px);
+		padding-right: em(10px);
+	}
+	&__read {
+		float: right;
+	}
+	&__excerpt {
+		clear: both;
+	}
+	&__button-wrapper {
+		text-align: center;
+		@include susy-breakpoint($desktop_layout) {
+			text-align: right;
+		}
+
+	}
+
+}

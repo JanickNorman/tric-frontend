@@ -1,0 +1,118 @@
+//
+// Some Useful color Vars via http://clrs.cc/
+//
+
+// Cool
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+
+
+// Warm
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$gray:   #aaa;
+$black:  #111;
+
+
+//
+// Add whatever variables you would like made available to the whole app
+//
+
+$main-color: #eaea3d;
+$second-color: #23231f;
+$third-color: #6b6834;
+$main-grey: #f4f4f4;
+$border-grey: #cccccc;
+$main-light: #d8d8d8;
+$tric-dark-grey: #808080;
+
+$color-nav-border-one: #848480;
+$color-nav-border-two: #777676;
+
+// $tablet_size: 34.6em;
+// $desktop_size: 44.375em;
+
+$tablet_layout: 40em em(980px);
+$desktop_layout: em(980px);
+
+//=== susy ====
+
+$susy: (
+  flow: ltr,
+  output: float, // float | isolate
+  math: fluid, // fluid | static (requires column-width)
+  column-width: 60px, // false | value
+  container: auto, // length or % | auto
+  container-position: center, // left | center | right | <length> [*2] (grid padding)
+  last-flow: to,
+  columns: 12,
+  gutters: 1/3,
+  gutter-position: split, // before | after | split | inside | inside-static (requires column-width)
+  global-box-sizing: content-box, // content-box | border-box (affects inside/inside-static)
+  debug: (
+	 image: hide,
+	 color: rgba(#66f, .25),
+	 output: background, // background | overlay
+	 toggle: top right,
+  ),
+  use-custom: (
+	 background-image: true, // look for background-image mixin
+	 background-options: false, // look for background-size, -origin and -clip and other compass/bourbon mixins
+	 box-sizing: true, // look for custom bix sizing mixin
+	 clearfix: false, // true = look for internal clearfix before using micro clearfix
+	 rem: true, // look for rem mixin
+  )
+);
+
+$mobile: (
+	flow: ltr,
+	output: float,
+	math: fluid,
+	column-width: 360px,
+	container: 95%,
+	container-position: center,
+	last-flow: to,
+	columns: 2,
+	gutters: 1/18,
+	gutter-position: split
+);
+
+$tablet: (
+	flow: ltr,
+	output: float,
+	math: fluid,
+	column-width: 230px,
+	container: 95%,
+	container-position: center,
+	last-flow: to,
+	columns: 4,
+	gutters: 2/23,
+	gutter-position: split
+);
+
+body {
+  background-color: white;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: 'arial', ' Fira Sans', sans-serif;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+* { -mox-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+ul { list-style-type: none; margin: 0; padding: 0}

@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+	head
+		title=pageName
+		meta(charset="utf-8")
+		meta(name="viewport")
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="assets/css/main.css">
+		<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+	body
+		header#header
+			include ./_partials/header.jade
+		.breadcrumb
+			include ./_partials/breadcrumb.jade
+		section#page-main
+			.page__wrapper
+				h1.page__title.page__title--center Tour de Poncol Jilid 2
+				.page__content-main
+					.page__content-gallery
+						img(src="assets/img/slideshow.jpg", alt="").page__content-gallery-main
+					.page__content-read
+						include ./_partials/loremipsum.jade
+					.page__content-meta-update <strong>Last updated:</strong> 27 July 2016
+					ul.page__social-share
+						li.page__social-share-item
+							a.page__social-share-link.page__social-share-link--facebook fb
+						li.page__social-share-item
+							a.page__social-share-link.page__social-share-link--twitter fb
+						li.page__social-share-item
+							a.page__social-share-link.page__social-share-link--googleplus tw
+						li.page__social-share-item
+							a.page__social-share-link.page__social-share-link--instagram g+
+					.page__related-content
+						h3 Related Content
+						ul
+							li.page__related-content-item
+								a Tour de jemper
+							li.page__related-content-item
+								a Cara merawat motor yang baik
+					.page__comment-box
+		include _partials/footer.jade

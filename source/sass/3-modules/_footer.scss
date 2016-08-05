@@ -1,0 +1,75 @@
+footer {
+	background-color: $second-color;
+}
+
+.footer {
+	&-social {
+		@include container($mobile);
+		@include susy-breakpoint($tablet_layout) {
+			@include container($tablet);
+		};
+		@include susy-breakpoint($desktop_layout) {
+			@include container;
+		};
+		&__item-link {
+			@include span(1 of 4 0);
+			height:  3.75em;
+			background-color: $main-color;
+			padding: 15px 0;
+			&--black {
+				background-color: $second-color;
+				color: $main-color;
+			}
+
+		} // di footer facebook, twitter, google+ etc
+		&__links {
+			background-color: $main-color;
+			text-align: center;
+		}
+	}
+
+	&-link {
+		@include container($mobile);
+		@include susy-breakpoint($desktop_layout) {
+			@include container;
+		};
+		&__wrapper {
+			@include span (last 1 of 2);
+			@include susy-breakpoint($desktop_layout) {
+				@include span(last 9);
+			};
+		}//to wrap the Struktur organisasi, Membership and Media to left
+		&__section {
+			@include span(1 of 2);
+			@include susy-breakpoint($desktop_layout) {
+				@include span(4 of 12);
+			}
+		}//the box that represents the footer content from title and list
+		&__wrapper &__section {
+			@include span(100%);
+			@include susy-breakpoint($desktop_layout) {
+				@include span(4 of 12);
+			}
+		}
+		&__title {
+			color: lighten($third-color, 10);
+		}
+		&__item {
+
+		}
+		&__item-link {
+			color: $main-light;
+		}
+		&--tentangTric {
+			@include susy-breakpoint($desktop_layout) {
+				@include span(3);
+			}
+		}
+		&--partnerOrg {
+			@include susy-breakpoint($desktop_layout) {
+				@include span(3);
+			}
+		}
+	}
+}
+

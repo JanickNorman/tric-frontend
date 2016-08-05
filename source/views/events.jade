@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+	head
+		title=pageName
+		meta(charset="utf-8")
+		meta(name="viewport")
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="assets/css/main.css">
+		<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+	body
+		header#header
+			include ./_partials/header.jade
+		.breadcrumb
+			include ./_partials/breadcrumb.jade
+
+		section#page-list--events.page-list.page-list--events
+			.page-list__wrapper.page-list--upcoming-events
+				h1 Upcoming Events
+				ul.page-list__wrapper.page-list__wrapper-cards
+					.page-list__event-cards.page-list__event-cards--today
+						li.page-list__event-card
+							.page-list__event-card-day Today
+							.page-list__event-card-pic-container
+								.page-list__event-card-pic
+									img(src="assets/img/webbanner.jpg", alt="")
+							.page-list__event-card-desc-wrapper
+								.page-list__event-card-title-wrapper
+									h3.page-list__event-card-title Tour de Bojong Kenyot
+								.page-list__event-card-timeloc-wrapper
+									.page-list__event-card-location Jakarta
+									.page-list__event-card-time 8AM-10AM
+						li.page-list__event-card
+							.page-list__event-card-day Today
+							h3.page-list__event-card-title Tour de Bojong Kenyot
+							.page-list__event-card-location Jakarta
+							.page-list__event-card-time 8AM-10AM
+					.page-list__event-cards.page-list__event-cards--week
+						li.page-list__event-card
+							.page-list__event-card-day 27 July 2016
+							.page-list__event-card-title-wrapper
+								h3.page-list__event-card-title Tour de Bojong Kenyot
+							.page-list__event-card-timeloc-wrapper
+								.page-list__event-card-location Jakarta
+								.page-list__event-card-time 8AM-10AM
+			.page-list__wrapper.page-list--latest-events
+				h1 Latest Events
+				ul.page-list__wrapper.page-list__wrapper-cards
+					.page-list__event-cards
+						li.page-list__event-card
+							.page-list__event-card-day 18 May 2016
+							h3.page-list__event-card-title Tour de Bojong Kenyot
+							.page-list__event-card-location Jakarta
+							.page-list__event-card-time 8AM-10AM
+						li.page-list__event-card
+							.page-list__event-card-day 18 May 2016
+							h3.page-list__event-card-title Tour de Bojong Kenyot
+							.page-list__event-card-location Jakarta
+							.page-list__event-card-time 8AM-10AM
+						li.page-list__event-card
+							.page-list__event-card-day 18 May 2016
+							h3.page-list__event-card-title Tour de Bojong Kenyot
+							.page-list__event-card-location Jakarta
+							.page-list__event-card-time 8AM-10AM
+			include ./_partials/pagination.jade
+		include ./_partials/footer.jade

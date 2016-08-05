@@ -1,0 +1,102 @@
+#media-main {
+	margin-bottom: 50px;
+	@include container($mobile);
+	@include susy-breakpoint($tablet_layout) {
+		@include container($tablet);
+	}
+	@include susy-breakpoint($desktop_layout) {
+		@include container;
+	}
+}
+.media-video {
+	margin-bottom: em(50px);
+	&__list {
+		@include clearfix;
+	}
+	&__item {
+		@include span(1 of 2);
+		@include susy-breakpoint($desktop_layout) {
+			@include span(2 of 4);
+		}
+		@include susy-breakpoint($desktop_layout) {
+			@include gallery(4 of 12);
+		}
+		margin-right: em(20px);
+		margin-bottom: em(20px);
+		background-color: grey;
+	}
+	&__container {
+		width: 100%;
+		height: auto;
+	}
+	&__button-wrapper {
+		text-align: center;
+		display: block;
+		@include susy-breakpoint($desktop_layout) {
+			text-align: right;
+		}
+
+	}
+}
+.media-gallery {
+	@include clearfix;
+	&__list {
+		@include clearfix;
+	}
+	&__item {
+		@include span(1 of 2);
+		//tablet harusnya
+		@include susy-breakpoint($desktop_layout) {
+			@include span(2 of 4);
+		}
+		@include susy-breakpoint($desktop_layout) {
+			@include span(4 of 12);
+		}
+		margin-right: em(20px);
+		margin-bottom: em(20px);
+	}
+	&__container {
+		width: 100%;
+		height: auto;
+	}
+	&__button-wrapper {
+		text-align: center;
+		@include susy-breakpoint($desktop_layout) {
+			text-align: right;
+		}
+
+	}
+}
+.media-blog {
+	@extend .media-box;
+	&__list {
+		@extend .media-box__list;
+	}
+	&__item {
+		@extend .media-box__item;
+	}
+	&__pic-container {
+		@extend .media-box__pic-container;
+	}
+	&__item-pic {
+		@extend .media-box__item-pic;
+	}
+	&__item-wrapper {
+		@extend .media-box__item-wrapper;
+	}
+	&__title {
+		@extend .media-box__title;
+	}
+	&__excerpt {
+		@extend .media-box__excerpt;
+	}
+	&__date {
+		@extend .media-box__date;
+	}
+	&__read {
+		@extend .media-box__read;
+	}
+	&__button-wrapper {
+		@extend .media-box__button-wrapper;
+	}
+}

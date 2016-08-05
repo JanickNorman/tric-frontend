@@ -1,0 +1,68 @@
+include ./template/media-box.jade
+
+doctype html
+html(lang="en")
+	head
+		title=pageName
+		meta(charset="utf-8")
+		meta(name="viewport")
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="assets/css/main.css">
+		<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+	body
+		header#header
+			include ./_partials/header.jade
+		.breadcrumb
+			include ./_partials/breadcrumb.jade
+		section#media-main
+			.media-video
+				h1.media-video__header Video
+				ul.media-video__list
+					li.media-video__item
+						.media-video__container .media-video__container
+					li.media-video__item
+						.media-video__container .media-video__container
+					li.media-video__item
+						.media-video__container .media-video__container
+					li.media-video__item
+						.media-video__container .media-video__container
+					li.media-video__item.media-video--hidden
+						.media-video__container .media-video__container
+					li.media-video__item.media-video--hidden
+						.media-video__container .media-video__container
+				.media-video__button-wrapper
+					button.btn.btn--black View all videos
+			.media-gallery
+				h1.media-gallery__header Gallery
+				ul.media-gallery__list
+					li.media-gallery__item
+						img(src="assets/img/webbanner.jpg", alt="" class="media-gallery__container")
+					li.media-gallery__item
+						img(src="assets/img/webbanner.jpg", alt="" class="media-gallery__container")
+					li.media-gallery__item
+						img(src="assets/img/webbanner.jpg", alt="" class="media-gallery__container")
+					li.media-gallery__item
+						img(src="assets/img/webbanner.jpg", alt="" class="media-gallery__container")
+				.media-gallery__button-wrapper
+					button.btn.btn--black View all gallery
+			//- .media-blog
+			//- 	h1.media-blog__header Blog
+			//- 	.media-blog__wrapper
+			//- 		ul.media-blog__list
+			//- 			+media-box("media-blog", "Tips agar berkendara lebih aman dan tentram", 'assets/img/webbanner.jpg')
+			//- 			+media-box("media-blog", "Tips agar berkendara lebih aman dan tentram", 'assets/img/webbanner.jpg')
+			//- 			+media-box("media-blog", "Tips agar berkendara lebih aman dan tentram")
+			//- 			+media-box("media-blog", "Tips agar berkendara lebih aman dan tentram")
+			//- 			+media-box("media-blog", "Tips agar berkendara lebih aman dan tentram")
+			//- 			+media-box("media-blog", "Tips agar berkendara lebih aman dan tentram")
+			//- 	.media-blog__button-wrapper
+			//- 		button.btn.btn--black View all blogs
+		include _partials/footer.jade
