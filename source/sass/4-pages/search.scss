@@ -1,4 +1,4 @@
-.search {
+.search-mod {
 
 	&__content-wrap {
 		@include container($mobile);
@@ -8,6 +8,25 @@
 		@include susy-breakpoint($desktop_layout) {
 			@include container;
 		}
-		background-color: green;
+		padding-bottom: 20px;
+	}
+	&__keyword {
+		background-color: $main-color;
+	}
+	&__result-list {
+    		list-style: none;
+    		padding: 0;
+    		margin: 0 0 35px;
+	}
+	&__result-item {
+		padding: 11px 0 15px;
+		border-bottom: 1px solid #dfdfdf;
+	}
+	&__result-title {
+		font-weight: normal;
+	}
+	&__pagination {
+		text-align: center;
+		margin-bottom: 50px;
 	}
 }

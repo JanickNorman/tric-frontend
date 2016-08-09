@@ -2105,4 +2105,57 @@ section.page-list:after {
   background-color: #f4f4f4;
 }
 
-@imrpot '4-pages/search';
+.search-mod__content-wrap {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+.search-mod__content-wrap:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 40em) and (max-width: 61.25em) {
+  .search-mod__content-wrap {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search-mod__content-wrap:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 61.25em) {
+  .search-mod__content-wrap {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search-mod__content-wrap:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+.search-mod__keyword {
+  background-color: #eaea3d;
+}
+.search-mod__result-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px;
+}
+.search-mod__result-item {
+  padding: 11px 0 15px;
+  border-bottom: 1px solid #dfdfdf;
+}
+.search-mod__result-title {
+  font-weight: normal;
+}
+.search-mod__pagination {
+  text-align: center;
+  margin-bottom: 50px;
+}
