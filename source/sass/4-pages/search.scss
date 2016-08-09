@@ -1,0 +1,13 @@
+.search {
+
+	&__content-wrap {
+		@include container($mobile);
+		@include susy-breakpoint($tablet_layout) {
+			@include container($tablet);
+		}
+		@include susy-breakpoint($desktop_layout) {
+			@include container;
+		}
+		background-color: green;
+	}
+}

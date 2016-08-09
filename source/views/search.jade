@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+	head
+		title=pageName
+		meta(charset="utf-8")
+		meta(name="viewport")
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="assets/css/main.css">
+		<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+	body
+		header#header
+			include ./_partials/header.jade
+		.search__content-wrap
+			header
+				h1.search__title Search
+			.search__paragraph-title Showing results from this site for <span class="search__keyword">Tes</span>
+			.search__bodytext About 746 results (0.14 seconds)
+			ul.search__result-list
+				li
+					h3.search__result-title Regional Commander | Struktur Organisasi | About TRIC
+					p.search__result-bodytext BP Global; BP Magazine; Locations; Fighting malaria in Indonesia. Fighting to beat malaria in Indonesia's Bintuni Bay. Last edited: 22 April 2016. ...
+					a.search__result-url(href="#") tric.or.id/about-tric/struktur-organisasi/regional-commander
+				li
+					h3.search__result-title <strong>Struktur Organisasi</strong> | About TRIC
+					p.search__result-bodytext .. Working with indigenous peoples in Indonesia. Working with indigenous peoples in Indonesia. ... Related content. Find out more about BP in Indonesia ...
+					a.search__result-url(href="#") tric.or.id/about-tric/regional-commander
+				li
+					h3.search__result-title Cara berkendara yang bagus | Blog
+					p.search__result-bodytext ... Early planning in offshore Indonesia. Society: Working with communities; Supporting development: ... BP awarded two exploration block in Indonesia. ...
+					a.search__result-url(href="#") tric.or.id/blog/cara-berkendara-yang...
+				li
+					h3.search__result-title Apalah title ini namanya | Blog
+					p.search__result-bodytext ... Safety at sea. Print archive. BP Global; Press; Press releases; BP awarded exploration block in Indonesia. BP awarded exploration block in Indonesia ...
+					a.search__result-url(href="#") tric.or.id/blog/apalah-title-ini-namanya
+		include _partials/footer.jade
