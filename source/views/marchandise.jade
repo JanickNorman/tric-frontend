@@ -20,16 +20,56 @@ html(lang="en")
 			include ./_partials/header.jade
 		.breadcrumb
 			include ./_partials/breadcrumb.jade
-		section#page-main
-			.page__wrapper.page__wrapper--has-nav
-				.marchandise__main
-					ul.page__social-share
-						li.page__social-share-item
-							a(href="#").page__social-share-link.page__social-share-link--facebook fb
-						li.page__social-share-item
-							a(href="#").page__social-share-link.page__social-share-link--twitter fb
-						li.page__social-share-item
-							a(href="#").page__social-share-link.page__social-share-link--googleplus tw
-						li.page__social-share-item
-							a(href="#").page__social-share-link.page__social-share-link--instagram g+
+		.marchandise__main
+			.marchandise__header-wrapper
+				header.marchandise__header-title
+					h1 Marchandise
+				.marchandise__collection-tags
+					select#marchandise__collection-selector(name="marchandise__collection-selector")
+						option(value="/marchandise/") All
+						option(value="/marchandise/?category=kaos") Kaos
+						option(value="/marchandise/?category=helm") Helm
+			ul.marchandise__catalog
+				li.marchandise__product
+					a(href="#", title="Kaos Tigers Rider Club Indonesia")
+						.marchandise__product-image-wrapper
+							img.marchandise__product-image(src="assets/img/marchandise.jpg", alt="")
+						.marchandise__product-description
+							h4.marchandise__product-name Marchandise nama
+							.marchandise__price Rp. 35.000
+				li.marchandise__product
+					a(href="#", title="Kaos Tigers Rider Club Indonesia")
+						.marchandise__product-image-wrapper
+							img.marchandise__product-image(src="assets/img/marchandise-jacket.png", alt="")
+						.marchandise__product-description
+							h4.marchandise__product-name Marchandise nama
+							.marchandise__price Rp. 35.000
+				li.marchandise__product
+					a(href="#", title="Kaos Tigers Rider Club Indonesia")
+						.marchandise__product-image-wrapper
+							img.marchandise__product-image(src="assets/img/marchandise-calendar.png", alt="")
+						.marchandise__product-description
+							h4.marchandise__product-name Marchandise nama
+							.marchandise__price Rp. 35.000
+				li.marchandise__product
+					a(href="#", title="Kaos Tigers Rider Club Indonesia")
+						.marchandise__product-image-wrapper
+							img.marchandise__product-image(src="assets/img/marchandise.jpg", alt="")
+						.marchandise__product-description
+							h4.marchandise__product-name Marchandise nama
+				li.marchandise__product
+					a(href="#", title="Kaos Tigers Rider Club Indonesia")
+						.marchandise__product-image-wrapper
+							img.marchandise__product-image(src="assets/img/marchandise-calendar.png", alt="")
+						.marchandise__product-description
+							h4.marchandise__product-name Marchandise nama
+							.marchandise__price Rp. 35.000
+				li.marchandise__product
+					a(href="#", title="Kaos Tigers Rider Club Indonesia")
+						.marchandise__product-image-wrapper
+							img.marchandise__product-image(src="assets/img/marchandise.jpg", alt="")
+						.marchandise__product-description
+							h4.marchandise__product-name Marchandise nama
+			.marchandise__pagination-wrapper
+				include ./_partials/pagination.jade
 		include _partials/footer.jade

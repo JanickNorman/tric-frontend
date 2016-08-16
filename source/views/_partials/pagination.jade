@@ -1,8 +1,13 @@
-.pagination.pagination--page-list
-	.pagination__info Page 1 of 110
+.pagination.pagination__list
 	.pagination__wrapper
-		.pagination__number.pagination__current 1
-		.pagination__number 2
-		.pagination__number 3
-		span.pagination__dots ...
-		.pagination__number 110
+		a(href="#").pagination__nav.pagination__nav--first
+			span.pagination__first-nav First
+		a(href="#").pagination__nav.pagination__nav--previous <
+		a(href="#").pagination__nav 8
+		a(href="#").pagination__nav 9
+		span.pagination__nav.pagination__nav--current 10
+		a(href="#").pagination__nav 11
+		a(href="#").pagination__nav 12
+		a(href="#").pagination__nav.pagination__nav--next >
+		a(href="#").pagination__nav.pagination__nav--last
+			span.pagination__first-nav Last

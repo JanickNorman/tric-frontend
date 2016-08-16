@@ -12,6 +12,7 @@ section {
 
 	&.page-list {
 		@include container($mobile);
+		margin-bottom: 50px;
 		@include susy-breakpoint($tablet_layout) {
 			@include container($tablet);
 		}
@@ -45,30 +46,6 @@ section {
 			color: $third-color;
 			content: "/";
 		}
-	}
-}
-.pagination {
-	&__info {
-		display: inline-block;
-	}
-	&__wrapper {
-		display: inline-block;
-		&::after {
-			display: block;
-			height: 20px;
-			background-color: green;
-		}
-	}
-	&__number {
-		display: inline-block;
-	}
-	&__current {
-		font-weight: bold;
-	}
-	&--page-list {
-		@include span(last);
-		margin-top: em(20px);
-		margin-bottom: em(20px);
 	}
 }
 .page-nav {
@@ -178,6 +155,7 @@ section {
 		width: em(720px);
 		max-width: 100%;
 		margin: 0 auto;
+		margin-bottom: 50px;
 	}
 	&__content-gallery {
 		margin-bottom: 20px;
@@ -295,5 +273,15 @@ section {
 	&__event-card-time {
 		float: right;
 		margin-right: em(10px);
+	}
+	&__pagination-wrapper {
+		@include clearfix;
+		text-align: center;
+		@include susy-breakpoint($tablet_layout) {
+			text-align: center;
+		}
+		@include susy-breakpoint($desktop_layout) {
+			text-align: right;
+		}
 	}
 }

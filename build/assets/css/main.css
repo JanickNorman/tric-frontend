@@ -999,6 +999,30 @@ footer {
   }
 }
 
+.pagination__info {
+  display: none;
+}
+@media (min-width: 40em) and (max-width: 61.25em) {
+  .pagination__info {
+    display: inline-block;
+  }
+}
+.pagination__wrapper {
+  display: inline-block;
+}
+.pagination__nav {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 10px 5px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  background-color: #f4f4f4;
+}
+.pagination__nav--current {
+  background: #dbdbdb;
+}
+
 section#slideshow {
   padding-top: 3.125em;
   padding-bottom: 1.875em;
@@ -1580,6 +1604,7 @@ section.page-list {
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
 }
 section.page-list:after {
   content: " ";
@@ -1659,31 +1684,6 @@ section.page-list:after {
   margin-right: 5px;
   color: #6b6834;
   content: "/";
-}
-
-.pagination__info {
-  display: inline-block;
-}
-.pagination__wrapper {
-  display: inline-block;
-}
-.pagination__wrapper::after {
-  display: block;
-  height: 20px;
-  background-color: green;
-}
-.pagination__number {
-  display: inline-block;
-}
-.pagination__current {
-  font-weight: bold;
-}
-.pagination--page-list {
-  float: right;
-  margin-left: 1.04167%;
-  margin-right: 1.04167%;
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
 }
 
 .page-nav {
@@ -1777,6 +1777,7 @@ section.page-list:after {
   width: 45em;
   max-width: 100%;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 .page__content-gallery {
   margin-bottom: 20px;
@@ -1913,6 +1914,24 @@ section.page-list:after {
 .page-list__event-card-time {
   float: right;
   margin-right: 0.625em;
+}
+.page-list__pagination-wrapper {
+  text-align: center;
+}
+.page-list__pagination-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media (min-width: 40em) and (max-width: 61.25em) {
+  .page-list__pagination-wrapper {
+    text-align: center;
+  }
+}
+@media (min-width: 61.25em) {
+  .page-list__pagination-wrapper {
+    text-align: right;
+  }
 }
 
 #media-main {
@@ -2158,4 +2177,117 @@ section.page-list:after {
 .search-mod__pagination {
   text-align: center;
   margin-bottom: 50px;
+}
+
+.marchandise__main {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.marchandise__main:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 40em) and (max-width: 61.25em) {
+  .marchandise__main {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .marchandise__main:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 61.25em) {
+  .marchandise__main {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .marchandise__main:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+.marchandise__catalog::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.marchandise__product {
+  clear: both;
+  width: 97.91667%;
+  float: left;
+  margin-left: 1.04167%;
+  margin-right: 1.04167%;
+  max-width: 225px;
+}
+@media (min-width: 40em) and (max-width: 61.25em) {
+  .marchandise__product {
+    width: 43.75%;
+    float: left;
+  }
+  .marchandise__product:nth-child(2n + 1) {
+    margin-left: 3.125%;
+    margin-right: -100%;
+    clear: both;
+  }
+  .marchandise__product:nth-child(2n + 2) {
+    margin-left: 53.125%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+@media (min-width: 61.25em) {
+  .marchandise__product {
+    width: 22.91667%;
+    float: left;
+  }
+  .marchandise__product:nth-child(4n + 1) {
+    margin-left: 1.04167%;
+    margin-right: -100%;
+    clear: both;
+  }
+  .marchandise__product:nth-child(4n + 2) {
+    margin-left: 26.04167%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .marchandise__product:nth-child(4n + 3) {
+    margin-left: 51.04167%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .marchandise__product:nth-child(4n + 4) {
+    margin-left: 76.04167%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+.marchandise__product-image {
+  max-width: 100%;
+  height: auto;
+}
+.marchandise__pagination-wrapper {
+  text-align: center;
+}
+.marchandise__pagination-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media (min-width: 40em) and (max-width: 61.25em) {
+  .marchandise__pagination-wrapper {
+    text-align: center;
+  }
+}
+@media (min-width: 61.25em) {
+  .marchandise__pagination-wrapper {
+    text-align: right;
+  }
 }

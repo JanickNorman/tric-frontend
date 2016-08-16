@@ -17,7 +17,7 @@
     <header id="header">
       <div class="nav">
         <div class="nav__sec-nav">
-          <div class="nav__wrapper"><a class="nav__slogan">&ldquo; Ride With Pride, TRiC Is My Pride &rdquo;</a>
+          <div class="nav__wrapper"><span class="nav__slogan">&ldquo; Ride With Pride, TRiC Is My Pride &rdquo;</span>
             <div class="nav__searchbar">.nav__searchbar
               <div class="nav-search"></div>
               <form action="/search.html?q=" method="GET" class="nav__search">
@@ -76,7 +76,7 @@
               </li>
               <li class="nav__item"><a href="/events.html" class="nav__item-links">Events</a></li>
               <li class="nav__item nav__item--active"><a href="/posts.html" class="nav__item-links">Artikel</a></li>
-              <li class="nav__item"><a href="/events.html" class="nav__item-links">Marchandise</a></li>
+              <li class="nav__item"><a href="/marchandise.html" class="nav__item-links">Marchandise</a></li>
               <li class="nav__item"><a href="/media.html" class="nav__item-links">Media</a>
                 <ul class="nav__panel-child">
                   <li class="nav__item-child"><a href="/page--with-nav.html" class="nav__item-child-links">Video</a></li>
@@ -125,18 +125,61 @@
       <div class="breadcrumb__item"><a href="/events.html">Events</a></div>
       <div class="breadcrumb__item breadcrumb__item--last"><span>Tour de Poncol Jilid 2</span></div>
     </div>
-    <section id="page-main">
-      <div class="page__wrapper page__wrapper--has-nav">
-        <div class="marchandise__main">
-          <ul class="page__social-share">
-            <li class="page__social-share-item"><a href="#" class="page__social-share-link page__social-share-link--facebook">fb</a></li>
-            <li class="page__social-share-item"><a href="#" class="page__social-share-link page__social-share-link--twitter">fb</a></li>
-            <li class="page__social-share-item"><a href="#" class="page__social-share-link page__social-share-link--googleplus">tw</a></li>
-            <li class="page__social-share-item"><a href="#" class="page__social-share-link page__social-share-link--instagram">g+</a></li>
-          </ul>
+    <div class="marchandise__main">
+      <div class="marchandise__header-wrapper">
+        <header class="marchandise__header-title">
+          <h1>Marchandise</h1>
+        </header>
+        <div class="marchandise__collection-tags">
+          <select id="marchandise__collection-selector" name="marchandise__collection-selector">
+            <option value="/marchandise/">All</option>
+            <option value="/marchandise/?category=kaos">Kaos</option>
+            <option value="/marchandise/?category=helm">Helm</option>
+          </select>
         </div>
       </div>
-    </section>
+      <ul class="marchandise__catalog">
+        <li class="marchandise__product"><a href="#" title="Kaos Tigers Rider Club Indonesia">
+            <div class="marchandise__product-image-wrapper"><img src="assets/img/marchandise.jpg" alt="" class="marchandise__product-image"></div>
+            <div class="marchandise__product-description">
+              <h4 class="marchandise__product-name">Marchandise nama</h4>
+              <div class="marchandise__price">Rp. 35.000</div>
+            </div></a></li>
+        <li class="marchandise__product"><a href="#" title="Kaos Tigers Rider Club Indonesia">
+            <div class="marchandise__product-image-wrapper"><img src="assets/img/marchandise-jacket.png" alt="" class="marchandise__product-image"></div>
+            <div class="marchandise__product-description">
+              <h4 class="marchandise__product-name">Marchandise nama</h4>
+              <div class="marchandise__price">Rp. 35.000</div>
+            </div></a></li>
+        <li class="marchandise__product"><a href="#" title="Kaos Tigers Rider Club Indonesia">
+            <div class="marchandise__product-image-wrapper"><img src="assets/img/marchandise-calendar.png" alt="" class="marchandise__product-image"></div>
+            <div class="marchandise__product-description">
+              <h4 class="marchandise__product-name">Marchandise nama</h4>
+              <div class="marchandise__price">Rp. 35.000</div>
+            </div></a></li>
+        <li class="marchandise__product"><a href="#" title="Kaos Tigers Rider Club Indonesia">
+            <div class="marchandise__product-image-wrapper"><img src="assets/img/marchandise.jpg" alt="" class="marchandise__product-image"></div>
+            <div class="marchandise__product-description">
+              <h4 class="marchandise__product-name">Marchandise nama</h4>
+            </div></a></li>
+        <li class="marchandise__product"><a href="#" title="Kaos Tigers Rider Club Indonesia">
+            <div class="marchandise__product-image-wrapper"><img src="assets/img/marchandise-calendar.png" alt="" class="marchandise__product-image"></div>
+            <div class="marchandise__product-description">
+              <h4 class="marchandise__product-name">Marchandise nama</h4>
+              <div class="marchandise__price">Rp. 35.000</div>
+            </div></a></li>
+        <li class="marchandise__product"><a href="#" title="Kaos Tigers Rider Club Indonesia">
+            <div class="marchandise__product-image-wrapper"><img src="assets/img/marchandise.jpg" alt="" class="marchandise__product-image"></div>
+            <div class="marchandise__product-description">
+              <h4 class="marchandise__product-name">Marchandise nama</h4>
+            </div></a></li>
+      </ul>
+      <div class="marchandise__pagination-wrapper">
+        <div class="pagination pagination__list">
+          <div class="pagination__wrapper"><a href="#" class="pagination__nav pagination__nav--first"><span class="pagination__first-nav">First</span></a><a href="#" class="pagination__nav pagination__nav--previous"><</a><a href="#" class="pagination__nav">8</a><a href="#" class="pagination__nav">9</a><span class="pagination__nav pagination__nav--current">10</span><a href="#" class="pagination__nav">11</a><a href="#" class="pagination__nav">12</a><a href="#" class="pagination__nav pagination__nav--next">></a><a href="#" class="pagination__nav pagination__nav--last"><span class="pagination__first-nav">Last</span></a></div>
+        </div>
+      </div>
+    </div>
     <footer id="footer">
       <div class="footer-social">
         <ul class="footer-social__links">

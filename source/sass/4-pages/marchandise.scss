@@ -1,0 +1,39 @@
+.marchandise {
+	&__main {
+		@include container($mobile);
+		@include susy-breakpoint($tablet_layout) {
+			@include container($tablet);
+		}
+		@include susy-breakpoint($desktop_layout) {
+			@include container;
+		}
+		margin-bottom: 50px;
+	}
+	&__catalog {
+		@include clearfix;
+	}
+	&__product {
+		@include full;
+		@include susy-breakpoint($tablet_layout) {
+			@include gallery(2 of 4 center);
+		}
+		@include susy-breakpoint($desktop_layout) {
+			@include gallery(3 of 12);
+		}
+		max-width: 225px;
+	}
+	&__product-image {
+	  	max-width: 100%;
+	  	height: auto;
+	}
+	&__pagination-wrapper {
+		@include clearfix;
+		text-align: center;
+		@include susy-breakpoint($tablet_layout) {
+			text-align: center;
+		}
+		@include susy-breakpoint($desktop_layout) {
+			text-align: right;
+		}
+	}
+}
