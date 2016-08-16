@@ -2123,6 +2123,24 @@ section.page-list:after {
 .news__item {
   background-color: #f4f4f4;
 }
+.news__pagination-wrapper {
+  text-align: center;
+}
+.news__pagination-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media (min-width: 40em) and (max-width: 61.25em) {
+  .news__pagination-wrapper {
+    text-align: center;
+  }
+}
+@media (min-width: 61.25em) {
+  .news__pagination-wrapper {
+    text-align: right;
+  }
+}
 
 .search-mod__content-wrap {
   max-width: 95%;
